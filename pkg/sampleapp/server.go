@@ -18,7 +18,7 @@ func HttpServer(port int) {
 
 	//business functions
 	http.HandleFunc("/business/readfile", business.ReadFile)
-
+	http.HandleFunc("/business/random", business.Random)
 
 	log.Printf("Starting sample app on port %d", port)
 	log.Printf("Examine metric endpoint: curl localhost:%d/metrics", port)
