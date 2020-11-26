@@ -29,6 +29,7 @@ curl -s http://localhost:8080/metrics/invalid | promtool check metrics
 
 ```
 curl http://localhost:8080/business/readfile
+curl http://localhost:8080/business/random
 ```
 
 This business function as two related metrics:
