@@ -1,6 +1,6 @@
 # Prometheus training application
 
-This training app provides to features 
+This training app provides to features:
 
 * A sample app with a target which can be registered in Prometheus
 * A webhook app which is used together with Alertmanager and acts as a webhook receiver
