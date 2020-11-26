@@ -6,26 +6,27 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// serverCmd represents the server command
-var serverCmd = &cobra.Command{
+var port *int
+
+var sampleAppCmd = &cobra.Command{
 	Use:   "sampleapp",
 	Short: "Start the sample application",
 	Long: `Start the sample application`,
 	Run: func(cmd *cobra.Command, args []string) {
-		sampleapp.HttpServer(args)
+		sampleapp.HttpServer(*port)
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(serverCmd)
+	rootCmd.AddCommand(sampleAppCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// serverCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// sampleAppCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// serverCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	port = sampleAppCmd.Flags().Int("port", 8080, "port of sample app (default: 8080)")
 }
