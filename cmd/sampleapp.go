@@ -1,18 +1,18 @@
 package cmd
 
 import (
-	"prometheus-sample-app/pkg/server"
+	"prometheus-training-app/pkg/sampleapp"
 
 	"github.com/spf13/cobra"
 )
 
 // serverCmd represents the server command
 var serverCmd = &cobra.Command{
-	Use:   "server",
+	Use:   "sampleapp",
 	Short: "Start the sample application",
 	Long: `Start the sample application`,
 	Run: func(cmd *cobra.Command, args []string) {
-		server.HttpServer(args)
+		sampleapp.HttpServer(args)
 	},
 }
 

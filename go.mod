@@ -1,4 +1,4 @@
-module prometheus-sample-app
+module prometheus-training-app
 
 go 1.15
 

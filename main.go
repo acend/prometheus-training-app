@@ -1,6 +1,6 @@
 package main
 
-import "prometheus-sample-app/cmd"
+import "prometheus-training-app/cmd"
 
 func main() {
 	cmd.Execute()

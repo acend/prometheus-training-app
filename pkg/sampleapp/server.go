@@ -1,10 +1,10 @@
-package server
+package sampleapp
 
 import (
 	"fmt"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"net/http"
-	"prometheus-sample-app/pkg/business"
+	"prometheus-training-app/pkg/business"
 )
 
 func invalidMetrics(w http.ResponseWriter, _ *http.Request) {
