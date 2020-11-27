@@ -32,12 +32,7 @@ curl http://localhost:8080/business/readfile
 curl http://localhost:8080/business/random
 ```
 
-This business function as two related metrics:
-
-```
-sampleapp_readfile_bytes_total
-sampleapp_readfile_total
-```
+Application specific metrics are prefixed with `sampleapp_`.
 
 ## Start the webhook app
 
